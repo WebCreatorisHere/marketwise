@@ -4,7 +4,7 @@ import Navbar from '../component/navbar'
 import Footer from '../component/footer'
 import Link from 'next/link'
 
-const success = () => {
+const SUCCESS = () => {
   return (
     <>
       <Navbar bg={{ color: "#0007", bodycolor: "black", bluurr: "blur(9px)", display: "1", invert: "invert(0)", position: "0rem", navtext: "white", usingtext: "white" }} />
@@ -22,4 +22,4 @@ const success = () => {
   )
 }
 
-export default success
+export default SUCCESS

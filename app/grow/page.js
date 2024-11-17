@@ -11,7 +11,7 @@ import "../hello.css"
 import { contactsaver } from '../actions/savedata'
 import { useRouter } from 'next/navigation';
 
-const grow = () => {
+const GROW = () => {
   const { register, handleSubmit, setError, formState: { errors, isSubmitting } } = useForm()
   const [form, setform] = useState({})
   const handlechange = (e) => {
@@ -90,4 +90,4 @@ const grow = () => {
   )
 }
 
-export default grow
+export default GROW

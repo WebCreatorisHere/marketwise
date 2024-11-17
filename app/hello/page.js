@@ -9,7 +9,7 @@ import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import "../hello.css"
 import { useRouter } from 'next/navigation'
-const heloo = () => {
+const HELLOO = () => {
   const { register, handleSubmit, setError, formState: { errors,isSubmitting } } = useForm()
   const [form, setform] = useState({ name: "", email: "", company: "", comment: "" })
   const changer = (e) => {
@@ -88,4 +88,4 @@ router.push("/success")
   )
 }
 
-export default heloo
+export default HELLOO
