@@ -1,7 +1,7 @@
 "use client"
 import { useForm } from 'react-hook-form'
 import React, { useState } from 'react'
-import { saver } from '../actions/savedata'
+
 import Navbar from '../component/navbar'
 import Footer from '../component/footer'
 import { Bounce } from 'react-toastify'
@@ -26,7 +26,20 @@ const HELLOO = () => {
     
   
     await delaymaker(3)
-   await saver(data)
+   let a = await fetch(`${process.env.NEXT_PUBLIC_CURR_URL}/api/actions`, {
+
+    // Adding method type
+    method: "POST",
+
+    // Adding body or contents to send
+    body: JSON.stringify(data),
+
+    // Adding headers to the request
+    headers: {
+      "Content-type": "application/json; charset=UTF-8"
+    }
+  })
+
     setform({ name: "", email: "", comment: "", company: "" })
     toast.success('Sent succesfully!', {
       position: "bottom-left",

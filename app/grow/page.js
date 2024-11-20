@@ -8,10 +8,10 @@ import { useForm } from 'react-hook-form'
 import Footer from '../component/footer'
 import Link from 'next/link'
 import "../hello.css"
-import { contactsaver } from '../actions/savedata'
 import { useRouter } from 'next/navigation';
 
 const GROW = () => {
+  const url = process.env.NEXT_PUBLIC_CURR_URL
   const { register, handleSubmit, setError, formState: { errors, isSubmitting } } = useForm()
   const [form, setform] = useState({})
   const handlechange = (e) => {
@@ -27,7 +27,19 @@ const GROW = () => {
   }
   const onsubmit = async (data) => {
     await delaymaker(3)
-    await contactsaver(data)
+    let a = await fetch(`${url}/api/actions`, {
+
+      // Adding method type
+      method: "PUT",
+  
+      // Adding body or contents to send
+      body: JSON.stringify(data),
+  
+      // Adding headers to the request
+      headers: {
+        "Content-type": "application/json; charset=UTF-8"
+      }
+    })
     setform({})
     toast.success('Sent succesfully!', {
       position: "bottom-left",
