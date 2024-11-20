@@ -27,7 +27,7 @@ const GROW = () => {
   }
   const onsubmit = async (data) => {
     await delaymaker(3)
-    let a = await fetch(`${url}/api/actions`, {
+    let a = await fetch("/api/actions", {
 
       // Adding method type
       method: "PUT",

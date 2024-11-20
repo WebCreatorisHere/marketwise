@@ -27,7 +27,7 @@ const HELLOO = () => {
     
   
     await delaymaker(3)
-   let a = await fetch(`${ur}/api/actions`, {
+   let a = await fetch("/api/actions", {
 
     // Adding method type
     method: "POST",
