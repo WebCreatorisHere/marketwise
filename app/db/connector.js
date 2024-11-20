@@ -6,7 +6,7 @@ const connectdb = async () => {
     return;
   }
 
-  const uri = process.env.MONGODB_URI;
+  const uri = process.env.NEXT_PUBLIC_MONGODB_URI;
   if (!uri) {
     console.error("MongoDB URI is undefined. Please check your environment variables.");
     return;
