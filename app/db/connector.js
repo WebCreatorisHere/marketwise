@@ -9,7 +9,8 @@ const connectdb = async () => {
   try {
     await mongoose.connect("mongodb+srv://yashthecool:aajbluehaipanipani@cluster12.wd89a.mongodb.net/marketwise", {
       useNewUrlParser: true,
-      useUnifiedTopology: true,
+  useUnifiedTopology: true,
+  serverSelectionTimeoutMS: 5000,
     });
     console.log("MongoDB connected successfully");
   } catch (error) {

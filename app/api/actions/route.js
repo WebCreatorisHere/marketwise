@@ -8,14 +8,7 @@ export const POST = async(req)=>{
     let data = await req.json();
     console.log(data)
     await connectdb()
-     const dama = new Cheese({
-        name:data.name,
-        company:data.company,
-        email:data.email,
-        message:data.message
-    })
-
-    await dama.save()
+     
     return NextResponse.json({data})
 }
 
