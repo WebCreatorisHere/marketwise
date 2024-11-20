@@ -4,14 +4,23 @@ import Contact from "../../model/second";
 export const POST = async(req)=>{
     let data = await req.json();
     await connectdb()
-    await Contact.create(data)
+    const dama = new Contact({
+        name:data.name,
+        company:data.company,
+        email:data.email,
+        comment:data.comment,
+        playlists:data.playlists,
+        budget:data.budget
+    })
+
+    await dama.save()
     console.log(data)
-    return NextResponse.json(data)
+    return NextResponse.json({data})
 
     }
 export const GET = async(req)=>{
     await connectdb()
-   let a = await Contact.findOne({company:"NOCOMPANY"})
-   NextResponse.json({success:true,message:"bhau"})
+   let a = await Contact.find({})
+   return NextResponse.json({a})
 
     }

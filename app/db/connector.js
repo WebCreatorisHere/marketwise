@@ -7,10 +7,8 @@ const connectdb = async () => {
   }
 
   try {
-    await mongoose.connect("mongodb+srv://yashthecool:aajbluehaipanipani@cluster12.wd89a.mongodb.net/marketwise", {
-      useNewUrlParser: true,
-  useUnifiedTopology: true,
-  serverSelectionTimeoutMS: 5000,
+    await mongoose.connect("mongodb+srv://yashthecool:aajbluehaipanipani@cluster12.wd89a.mongodb.net/marketwise?retryWrites=true&w=majority&appName=Cluster12", {
+      serverApi: { version: '1', strict: true, deprecationErrors: true }
     });
     console.log("MongoDB connected successfully");
   } catch (error) {
