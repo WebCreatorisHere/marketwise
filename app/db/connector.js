@@ -1,9 +1,7 @@
 import mongoose from "mongoose";
 const connectdb = async()=>{
     try {
-       await mongoose.connect("mongodb+srv://yashthecool:aajbluehaipanipani@cluster12.wd89a.mongodb.net/marketwise", {
-          useNewUrlParser: true,
-        });
+       await mongoose.connect("mongodb+srv://yashthecool:aajbluehaipanipani@cluster12.wd89a.mongodb.net/marketwise");
       } catch (error) {
         console.error(error)
       }
