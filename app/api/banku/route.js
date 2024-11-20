@@ -11,7 +11,7 @@ export const POST = async(req)=>{
     }
 export const GET = async(req)=>{
     await connectdb()
-   let a = await Contact.findOne({})
-   NextResponse.json({data:a.toString()})
+   let a = await Contact.findOne({company:"NOCOMPANY"})
+   NextResponse.json({success:true,message:"bhau"})
 
     }
