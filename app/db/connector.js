@@ -7,7 +7,7 @@ const connectdb = async () => {
   }
 
   try {
-    await mongoose.connect(process.env.MONGODB_URL, {
+    await mongoose.connect(process.env.NEXT_PUBLIC_MONGODB_URL, {
       serverApi: { version: '1', strict: true, deprecationErrors: true }
     });
     console.log("MongoDB connected successfully");
