@@ -1,7 +1,6 @@
 import { NextResponse } from "next/server";
 import connectdb from "@/app/db/connector";
 import Contact from "../../model/second";
-export const maxDuration = 30
 export const POST = async(req)=>{
     let data = await req.json();
     await connectdb()
@@ -12,7 +11,7 @@ export const POST = async(req)=>{
     }
 export const GET = async(req)=>{
     await connectdb()
-   let a = await Contact.find()
+   let a = await Contact.findOne({})
    NextResponse.json({data:a.toString()})
 
     }
