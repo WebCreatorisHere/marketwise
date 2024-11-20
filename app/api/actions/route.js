@@ -20,17 +20,10 @@ export const POST = async(req)=>{
 export const PUT = async(req)=>{
     let data = await req.json();
     await connectdb()
-     const chama = new Contact({
-         name:data.name,
-         company:data.company,
-         email:data.email,
-         budget:data.budget,
-         playlists:data.playlists,
-         comment:data.comment
-        })
-        
-        await chama.save()
-        return NextResponse.json({success:true,message:"done"})
+    await Contact.create(data)
+    console.log(data)
+    return NextResponse.json(data)
+
     }
 export const GET = async(req)=>{
 

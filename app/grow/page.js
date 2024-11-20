@@ -40,6 +40,8 @@ const GROW = () => {
         "Content-type": "application/json; charset=UTF-8"
       }
     })
+    let jk = await a.json()
+    console.log(jk)
     setform({})
     toast.success('Sent succesfully!', {
       position: "bottom-left",
