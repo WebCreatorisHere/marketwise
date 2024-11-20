@@ -17,15 +17,9 @@ export const POST = async(req)=>{
     return NextResponse.json({success:true,message:"done"})
 }
 
-export const PUT = async(req)=>{
-    let data = await req.json();
-    await connectdb()
-    await Contact.create(data)
-    console.log(data)
-    return NextResponse.json(data)
-
-    }
 export const GET = async(req)=>{
+    await connectdb()
+   let a = await Cheese.find()
+   NextResponse.json({data:a.toString()})
 
-        return NextResponse.json({success:true,message:"done"})
     }

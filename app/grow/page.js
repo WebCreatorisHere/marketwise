@@ -27,10 +27,10 @@ const GROW = () => {
   }
   const onsubmit = async (data) => {
     await delaymaker(3)
-    let a = await fetch("/api/actions", {
+    let a = await fetch("/api/banku", {
 
       // Adding method type
-      method: "PUT",
+      method: "POST",
   
       // Adding body or contents to send
       body: JSON.stringify(data),
