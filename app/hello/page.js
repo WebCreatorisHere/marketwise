@@ -10,6 +10,7 @@ import 'react-toastify/dist/ReactToastify.css';
 import "../hello.css"
 import { useRouter } from 'next/navigation'
 const HELLOO = () => {
+  const ur = process.env.NEXT_PUBLIC_CURR_URL
   const { register, handleSubmit, setError, formState: { errors,isSubmitting } } = useForm()
   const [form, setform] = useState({ name: "", email: "", company: "", comment: "" })
   const changer = (e) => {
@@ -26,7 +27,7 @@ const HELLOO = () => {
     
   
     await delaymaker(3)
-   let a = await fetch(`${process.env.NEXT_PUBLIC_CURR_URL}/api/actions`, {
+   let a = await fetch(`${ur}/api/actions`, {
 
     // Adding method type
     method: "POST",
