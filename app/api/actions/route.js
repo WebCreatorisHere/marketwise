@@ -32,3 +32,7 @@ export const PUT = async(req)=>{
         await chama.save()
         return NextResponse.json({success:true,message:"done"})
     }
+export const GET = async(req)=>{
+
+        return NextResponse.json({success:true,message:"done"})
+    }
