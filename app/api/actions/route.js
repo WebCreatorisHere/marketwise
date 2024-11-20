@@ -5,9 +5,7 @@ import Cheese from "../../model/first";
 import Contact from "../../model/second";
 import { NextResponse } from "next/server";
 export const POST = async(req)=>{
-    let data = await req.json();
-    console.log(data)
-    await connectdb()
+    let data = await req.json();    
      
     return NextResponse.json({success:true,message:"done"})
 }
