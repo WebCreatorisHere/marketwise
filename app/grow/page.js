@@ -73,9 +73,9 @@ const GROW = () => {
       <Navbar bg={{ color: "#141414", bodycolor: "black", bluurr: "blur(0px)", display: "1", invert: "invert(0)", position: "0rem", navtext: "white", usingtext: "white" }} />
       <section className='w-full mt-[6rem]'>
         <div className='text-[3.5rem] py-5 pb-8 text-center font-semibold bg-[#141414] text-white'>Grow your playlist</div>
-        <h3 className='text-[2.4rem] py-10 mb-10 font-medium text-center'>Define your product!</h3>
+        <h6 className='text-[2.4rem] py-10 mb-10 font-medium text-center'>Define your product!</h6>
         <div className="area w-[43rem] m-auto">
-          <h5 className='text-2xl font-medium p-5'>About you and your art.</h5>
+          <h2 className='text-2xl font-medium p-5'>About you and your art.</h2>
           <form onSubmit={handleSubmit(onsubmit)}>
             {errors.name && <div className='text-[#ff6b6b] mx-3 text-sm font-semibold'> {errors.name.message}</div>}
             <input onChange={handlechange} value={form.name} {...register("name", { required: { value: true, message: "PLEASE ENTER YOUR NAME" } })} className={`border mb-7 focus:placeholder:text-black placeholder:text-[#9A9A9A] font-medium w-full rounded-xl py-[0.70rem] px-5 text-[1.35rem] border-1 border-[#9a9a9a] ${errors.name?"border-[#ff6b6b] border-[2px]":"border-[#9a9a9a]"}`} placeholder='Name*' type="text" />
