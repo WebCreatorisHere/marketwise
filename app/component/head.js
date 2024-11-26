@@ -11,6 +11,7 @@ export default function OptimizedHead() {
         type="text/css"
         crossorigin="anonymous"
       />
+      <meta name="google-site-verification" content="IJZRK9vE98r2pXikqlCaHSzRewt4cdj1gytbpadM70A" />
       <link rel="preconnect" href="https://www.marketwise.io/"/>
       <link
         rel="stylesheet"
